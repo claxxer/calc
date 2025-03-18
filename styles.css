@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden; /* Prevent overflow outside the calculator container */
+  overflow: hidden;
 }
 
 /* Display input box */
@@ -28,11 +28,12 @@
   border-radius: 5px;
   border: 2px solid #ccc;
   margin-bottom: 20px;
-  width: auto; /* Allow the display to resize dynamically */
-  min-width: 60px; /* Ensure it doesn't shrink too much */
-  max-width: 100%; /* Ensure the display won't exceed the container's width */
+  width: 100%; /* Let it grow horizontally */
+  min-width: 60px; /* Prevent it from shrinking too small */
+  max-width: 100%; /* Ensure it won't exceed the container width */
   white-space: nowrap; /* Prevent the text from wrapping */
-  overflow-x: auto; /* Horizontal scrolling if the content overflows */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  transition: width 0.2s ease; /* Smooth transition for resizing */
 }
 
 /* Buttons */
@@ -47,14 +48,4 @@ button {
   cursor: pointer;
 }
 
-button.operator {
-  background-color: #ff6f61; /* Sunset orange for operators */
-}
-
-button:active {
-  background-color: #ff3b30; /* Darker shade for active state */
-}
-
-button:focus {
-  outline: none;
-}
+button.op
