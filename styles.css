@@ -1,0 +1,127 @@
+/* General body and page setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sunset gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  transition: background 0.5s ease-in-out;
+}
+
+.calculator-container {
+  position: relative;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display input {
+  width: 250px;
+  height: 60px;
+  font-size: 32px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Buttons styling */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 320px;
+}
+
+.button {
+  font-size: 24px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff6f61; /* Sunset orange */
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #feb47b; /* Lighter sunset color */
+  transform: scale(1.05);
+}
+
+.operator {
+  background-color: #ff9a8b; /* Lighter orange for operators */
+}
+
+.operator:hover {
+  background-color: #f7c57f;
+}
+
+.equals {
+  background-color: #ff5c8d; /* Sunset pink for equals */
+  grid-column: span 2;
+}
+
+.equals:hover {
+  background-color: #f7a2c2;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Clear button style */
+button:focus {
+  outline: none;
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .display input {
+    width: 220px;
+    font-size: 28px;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
