@@ -42,6 +42,6 @@ function resizeDisplay() {
   const length = display.value.length;
   
   // Dynamically adjust the width based on the input length
-  // The width starts from 60px and increases by 10px per character, with a max width of 100% of the calculator container's width.
+  // 60px + 10px per character, max width of 100% of the calculator container
   display.style.width = `${Math.min(60 + length * 12, 320)}px`;
 }
