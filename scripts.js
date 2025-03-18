@@ -42,5 +42,6 @@ function resizeDisplay() {
   const length = display.value.length;
   
   // Dynamically adjust the width based on the input length
-  display.style.width = `${Math.min(60 + length * 10, 300)}px`; // 60px + 10px per character, max width of 300px
+  // 60px + 10px per character, max width of 300px
+  display.style.width = `${Math.min(60 + length * 12, 300)}px`;
 }
