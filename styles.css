@@ -1,15 +1,36 @@
-/* Set a maximum width for the display */
-.calculator input#display {
+/* Basic style for calculator container */
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Sunset gradient */
+}
+
+/* Calculator style */
+.calculator {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Display input box */
+#display {
   width: 60px; /* Initial width */
-  max-width: 100%; /* Prevent it from stretching too far */
-  font-size: 2em; /* Adjust the font size to make it legible */
+  max-width: 100%; /* Allow max width to grow */
+  font-size: 2em;
   text-align: right;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
   transition: width 0.3s ease; /* Smooth transition for resizing */
 }
 
-/* Optional: You can customize the button styles to match the sunset theme */
+/* Buttons */
 button {
-  background-color: #FF9A8B; /* Light sunset pink */
+  background-color: #ff9a8b; /* Light sunset pink */
   color: white;
   font-size: 1.5em;
   padding: 20px;
@@ -20,11 +41,11 @@ button {
 }
 
 button.operator {
-  background-color: #FF6F61; /* Sunset orange for operators */
+  background-color: #ff6f61; /* Sunset orange for operators */
 }
 
 button:active {
-  background-color: #FF3B30; /* Darker shade for active state */
+  background-color: #ff3b30; /* Darker shade for active state */
 }
 
 button:focus {
