@@ -17,15 +17,17 @@
 
 /* Display input box */
 #display {
-  width: 60px; /* Initial width */
-  max-width: 100%; /* Allow max width to grow */
-  font-size: 2em;
+  font-size: 2em; /* Make the text large enough to be visible */
   text-align: right;
   padding: 10px;
   border-radius: 5px;
   border: 2px solid #ccc;
   margin-bottom: 20px;
-  transition: width 0.3s ease; /* Smooth transition for resizing */
+  width: 100%; /* Let it fill the parent width */
+  min-width: 60px; /* Prevent shrinking too small */
+  white-space: nowrap; /* Prevent wrapping of the text */
+  overflow-x: auto; /* Allow horizontal scrolling if text overflows */
+  max-width: 100%; /* Limit the max width to the parent's size */
 }
 
 /* Buttons */
